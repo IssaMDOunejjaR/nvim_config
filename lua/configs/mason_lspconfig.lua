@@ -60,6 +60,7 @@ local servers = {
   asm_lsp = {},
   angularls = {},
   tailwindcss = {},
+  ansiblels = {},
 
   lua_ls = {
     Lua = {
