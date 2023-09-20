@@ -3,11 +3,29 @@
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'c', 'cpp', 'lua', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'css',
-    'dockerfile', 'html', 'json', 'make', 'scss', 'sql', 'yaml' },
+    'dockerfile', 'html', 'json', 'make', 'scss', 'sql', 'yaml', 'xml' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
 
+  autotag = {
+    enable = true,
+    enable_rename = true,
+    enable_close = true,
+    enable_close_on_slash = true,
+    filetypes = {
+      'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx',
+      'jsx', 'rescript',
+      'xml',
+      'php',
+      'markdown',
+      'astro', 'glimmer', 'handlebars', 'hbs'
+    },
+    skip_tags = {
+      'area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'slot',
+      'input', 'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr', 'menuitem'
+    }
+  },
   highlight = { enable = true },
   indent = { enable = true },
   incremental_selection = {
